@@ -1,1 +1,1 @@
-web: flask run
+web: cd server flask run
