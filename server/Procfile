@@ -1,1 +1,1 @@
-web: flask run -p os.environ.get('PORT', 33507)
+web: flask run -p 33807
