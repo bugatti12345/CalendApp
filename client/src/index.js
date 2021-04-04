@@ -11,4 +11,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Mixing it up on port ${PORT}`));
+App.listen(PORT, () => console.log(`Mixing it up on port ${PORT}`));
