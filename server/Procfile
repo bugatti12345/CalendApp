@@ -1,1 +1,1 @@
-web:flask run
+web:pipenv flask run
