@@ -27,3 +27,7 @@ app.register_blueprint(subscription_handler)
 app.register_blueprint(availability_handler)
 app.register_blueprint(appointment_handler)
 app.register_blueprint(token_check_handler)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
