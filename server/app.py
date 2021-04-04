@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_migrate import Migrate
 import config
+import os
 from config import db
 from api.user_info_handler import user_info_handler
 from model.model import Users,EventTypes,Appointments
