@@ -7,6 +7,7 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
+import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Menu from '@material-ui/core/Menu';
@@ -19,6 +20,9 @@ import { UserContext } from '../globals/UserContext';
 
 const useStyles = makeStyles((theme) => ({
     //card
+    cardHeader: {
+        padding: "5px 5px 0 0"
+    },
     cardBody: {
         margin: '30px 60px 30px 0',
         '@media(max-width:960px)': {
@@ -71,6 +75,9 @@ const useStyles = makeStyles((theme) => ({
         objectFit: 'cover',
         borderRadius: 30,
         marginRight: 20
+    },
+    userinfo: {
+        marginBottom: 20
     },
     newEventBtnContainer: {
         paddingRight: 60,
@@ -164,8 +171,11 @@ function EventTypeCard(props) {
         <Grid item xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.cardBody}>
                 <div className={classes.colorTag} style={{ background: color }}></div>
-                <CardHeader action={<SettingsOutlinedIcon
-                    className={classes.settingIcon} onClick={handleSettingClick} />} />
+                <CardHeader action={
+                    <IconButton onClick={handleSettingClick}>
+                        <SettingsOutlinedIcon className={classes.settingIcon} />
+                    </IconButton>
+                } className={classes.cardHeader} />
                 <Menu
                     anchorEl={anchorEl}
                     keepMounted
@@ -254,7 +264,7 @@ export default function EventTypesTab(props) {
         <div className={classes.tabBackgorund}>
             <Grid container className={classes.tabBody}>
                 <Grid item container direction="row">
-                    <Grid item container direction="row" sm={6}>
+                    <Grid item container direction="row" sm={6} className={classes.userinfo}>
                         <Grid item className={classes.imgContainer}>
                             <img src={Avatar} alt="Avatar" className={classes.avatar} />
                         </Grid>
