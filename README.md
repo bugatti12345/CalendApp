@@ -18,8 +18,8 @@ A clone of [Calendly](https://calendly.com) whitch allow the logged in user set 
 -   ### [LIVE DEMO](http://ec2-54-241-68-236.us-west-1.compute.amazonaws.com/)
 -   #### Demo Gmail account: 
 -   ```
--   joshliudemotest@gmail.com
--   demotest
+        joshliudemotest@gmail.com
+        demotest
 -   ```
 
 ## Features
